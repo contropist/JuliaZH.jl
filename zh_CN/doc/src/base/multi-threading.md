@@ -5,19 +5,21 @@ Base.Threads.@threads
 Base.Threads.foreach
 Base.Threads.@spawn
 Base.Threads.threadid
+Base.Threads.maxthreadid
 Base.Threads.nthreads
+Base.Threads.threadpool
+Base.Threads.nthreadpools
+Base.Threads.threadpoolsize
+Base.Threads.ngcthreads
 ```
 
-## 同步
-
-```@docs
-Base.Threads.Condition
-Base.Threads.Event
-```
-
-另见 [同步](@ref lib-task-sync) 。
+See also [Multi-Threading](@ref man-multithreading).
 
 ## 原子操作
+
+```@docs
+atomic
+```
 
 ```@docs
 Base.@atomic
@@ -56,7 +58,7 @@ Base.Threads.atomic_min!
 Base.Threads.atomic_fence
 ```
 
-## ccall using a threadpool (Experimental)
+## ccall using a libuv threadpool (Experimental)
 
 ```@docs
 Base.@threadcall
